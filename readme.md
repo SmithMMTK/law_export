@@ -28,8 +28,14 @@ Azure Event Hubs is a fully managed, real-time data streaming platform that can 
 
 [03 Sentinel Pricing](03%20Sentinel%20Pricing.md)
 
-https://learn.microsoft.com/en-us/azure/sentinel/billing?tabs=simplified%2Ccommitment-tiers#understand-the-full-billing-model-for-microsoft-sentinel
+Commitment tiers offer predictable costs and savings up to 52% over Pay-As-You-Go rates by allowing customers to reserve daily data ingestion capacity for the analytics tier, from 100 GB to 50,000 GB. They can be upgraded at any time and downgraded after 31 days. Usage exceeding the commitment tier will be billed at the same discounted rate.[3](https://www.microsoft.com/en-us/security/pricing/microsoft-sentinel/#footnote3)
 
-https://www.microsoft.com/en-us/security/pricing/microsoft-sentinel/
+---
+
+[04 Prepare Azure Resources for exporting to Splunk](04%20Prepare%20Azure%20Resources%20for%20exporting%20to%20Splunk.md)
+
+In order to stream Microsoft Defender for Cloud security alerts to IBM QRadar and Splunk, you have to set up resources in Azure, such as Event Hubs and Microsoft Entra ID. Here are the instructions for configuring these resources in the Azure portal, but you can also configure them using a PowerShell script. Make sure you review [Stream alerts to QRadar and Splunk](https://learn.microsoft.com/en-us/azure/defender-for-cloud/export-to-siem#stream-alerts-to-qradar-and-splunk) before you configure the Azure resources for exporting alerts to QRadar and Splunk.
+
+The Splunk Add-on for Microsoft Cloud Services allows a Splunk software administrator to pull activity logs, service status, operational messages, Azure audit, Azure resource data and Azure Storage Table and Blob data from a variety of Microsoft cloud services using Event Hubs, Azure Service Management APIs and Azure Storage API. This add-on provides the inputs and CIM-compatible knowledge to use with other Splunk apps, such as Splunk Enterprise Security and the Splunk App for PCI Compliance and Splunk IT Service Intelligence.
 
 ---

@@ -39,3 +39,9 @@ In order to stream Microsoft Defender for Cloud security alerts to IBM QRadar an
 The Splunk Add-on for Microsoft Cloud Services allows a Splunk software administrator to pull activity logs, service status, operational messages, Azure audit, Azure resource data and Azure Storage Table and Blob data from a variety of Microsoft cloud services using Event Hubs, Azure Service Management APIs and Azure Storage API. This add-on provides the inputs and CIM-compatible knowledge to use with other Splunk apps, such as Splunk Enterprise Security and the Splunk App for PCI Compliance and Splunk IT Service Intelligence.
 
 ---
+
+[scripts/How to run script](scripts/How%20to%20run%20script.md)
+
+Step-by-step guide for running the LAW Export script — prerequisites, environment setup, one-time export, and scheduled (cron) execution.
+
+---

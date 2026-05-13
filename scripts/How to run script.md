@@ -62,7 +62,7 @@ WORKSPACE_ID="your-workspace-id-here"
 ### 3. Make Script Executable
 
 ```bash
-chmod +x "LAW Expoert.sh"
+chmod +x "LAW Export.sh"
 ```
 
 ### 4. Test Authentication
@@ -82,7 +82,7 @@ Quick extraction of activity logs to local CSV/JSON files.
 
 ```bash
 cd scripts
-./LAW\ Expoert.sh
+./LAW\ Export.sh
 ```
 
 **Output Generated:**
@@ -100,7 +100,7 @@ For regular automated transfers:
 crontab -e
 
 # Daily at 2 AM
-0 2 * * * /Users/smithm/law_export/scripts/LAW\ Expoert.sh >> /var/log/law_export.log 2>&1
+0 2 * * * /Users/smithm/law_export/scripts/LAW\ Export.sh >> /var/log/law_export.log 2>&1
 ```
 
 **Windows (Task Scheduler):**
@@ -109,4 +109,4 @@ crontab -e
 3. Set Trigger: Daily / Weekly as needed
 4. Set Action: 
    - Program: `C:\Program Files\Git\bin\bash.exe`
-   - Arguments: `"C:\path\to\LAW Expoert.sh"`
+   - Arguments: `"C:\path\to\LAW Export.sh"`

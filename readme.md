@@ -10,8 +10,6 @@
 - To request details on the Event Hub charging model.  
   In the context of Zava, how would Event Hub pricing be structured and applied?
 - To reconfirm our understanding of the charging model for Azure Log Analytics Workspace versus Azure Sentinel.  (Azure Sentinel is billed based on the log volume ingested into Log Analytics Workspace, with no additional charges for Sentinel features themselves—please confirm.)
-- Next step
-- Q & A
 
 ---
 

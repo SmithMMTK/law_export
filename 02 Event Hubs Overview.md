@@ -1,0 +1,46 @@
+https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-about
+
+## What is Azure Event Hubs
+
+Azure Event Hubs is a fully managed, real-time data streaming platform that can ingest millions of events per second with low latency. As a native Azure service with built-in Apache Kafka compatibility, Event Hubs enables you to run existing Kafka workloads without code changes or cluster management overhead.
+
+Organizations use Event Hubs to build data pipelines for IoT telemetry, application logging, clickstream analytics, financial transaction processing, and other scenarios that require high-throughput, reliable event ingestion. Event Hubs integrates with Azure analytics services to enable real-time insights and long-term data retention.
+
+## At a glance
+
+| Attribute               | Details                                                                                              |
+| ----------------------- | ---------------------------------------------------------------------------------------------------- |
+| **Service type**        | Fully managed event streaming platform (PaaS)                                                        |
+| **Protocols supported** | Apache Kafka, AMQP 1.0, HTTPS                                                                        |
+| **Data retention**      | Up to 7 days (Standard), 90 days (Premium/Dedicated)                                                 |
+| **Pricing tiers**       | [Standard, Premium, Dedicated](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-quotas) |
+| **SLA**                 | [Up to 99.99%](https://azure.microsoft.com/support/legal/sla/event-hubs/)                            |
+
+---
+
+## Pricing
+
+https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-quotas
+
+| Limit                                                     | Basic                                                                                         | Standard                                                                                      | Premium                                                                                              | Dedicated                             |
+| --------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------- |
+| Maximum size of Event Hubs publication                    | 256 KB                                                                                        | 1 MB                                                                                          | 1 MB                                                                                                 | 20 MB                                 |
+| Number of consumer groups per event hub                   | 1                                                                                             | 20                                                                                            | 100                                                                                                  | 1,000  <br>No limit per CU            |
+| Number of Kafka consumer groups per namespace             | N/A                                                                                           | 1,000                                                                                         | 1,000                                                                                                | 1,000                                 |
+| Number of brokered connections per namespace              | 100                                                                                           | 5,000                                                                                         | 10,000 per PU  <br><br>For example, if the namespace is assigned 4 PUs, the limit is 40,000.         | 100,000 per CU                        |
+| Maximum retention period of event data                    | 1 day                                                                                         | 7 days                                                                                        | 90 days                                                                                              | 90 days                               |
+| Event storage for retention                               | 84 GB per TU                                                                                  | 84 GB per TU                                                                                  | 1 TB per PU                                                                                          | 10 TB per CU                          |
+| Maximum TUs or PUs or CUs                                 | 40 TUs                                                                                        | 40 TUs                                                                                        | 16 PUs                                                                                               | 20 CUs                                |
+| Number of partitions per event hub                        | 32                                                                                            | 32                                                                                            | 100 per event hub, but there's a limit of 200 per PU at the namespace level.  <br><br>For example, if a namespace is assigned 2 PUs, the limit for total number of partitions in all event hubs in the namespace is 2 * 200 = 400. | 1,024 per event hub  <br>2,000 per CU |
+| Number of namespaces per subscription per region          | 1,000 (all tiers)                                                                             | 1,000 (all tiers)                                                                             | 1,000 (all tiers)                                                                                    | 1,000 (50 per CU)                     |
+| Number of event hubs per namespace                        | 10                                                                                            | 10                                                                                            | 100 per PU                                                                                           | 1,000                                 |
+| Capture                                                   | N/A                                                                                           | Pay per hour                                                                                  | Included                                                                                             | Included                              |
+| Size of compacted event hub                               | N/A                                                                                           | 1 GB per partition                                                                            | 250 GB per partition                                                                                 | 250 GB per partition                  |
+| Size of the schema registry (namespace) in megabytes      | N/A                                                                                           | 25                                                                                            | 100                                                                                                  | 1,024                                 |
+| Number of schema groups in a schema registry or namespace | N/A                                                                                           | 1: excluding the default group                                                                | 100  <br>1 MB per schema                                                                             | 1,000  <br>1 MB per schema            |
+| Number of schema versions across all schema groups        | N/A                                                                                           | 25                                                                                            | 1,000                                                                                                | 10,000                                |
+| Throughput per unit                                       | Ingress: 1 MB/sec or 1,000 events per second  <br>Egress: 2 MB/sec or 4,096 events per second | Ingress: 1 MB/sec or 1,000 events per second  <br>Egress: 2 MB/sec or 4,096 events per second | No limits per PU *                                                                                   | No limits per CU *                    |
+
+Pricing Calculator (1M events per month)
+
+ ![](attachments/Pasted%20image%2020260513140800.png)

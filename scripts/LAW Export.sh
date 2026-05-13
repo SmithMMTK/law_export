@@ -1,7 +1,7 @@
 ## Export Azure Log Analytics query results to CSV
 
-# Load WORKSPACE_ID from .env file
-source .env
+# Load WORKSPACE_ID from .env file (resolved relative to script location for cron compatibility)
+source "$(dirname "$0")/.env"
 
 WORKSPACE_ID="$WORKSPACE_ID"
 

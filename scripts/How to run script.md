@@ -100,7 +100,7 @@ For regular automated transfers:
 crontab -e
 
 # Daily at 2 AM
-0 2 * * * /Users/smithm/law_export/scripts/LAW\ Export.sh >> /var/log/law_export.log 2>&1
+0 2 * * * /path/to/law_export/scripts/LAW\ Export.sh >> /var/log/law_export.log 2>&1
 ```
 
 **Windows (Task Scheduler):**

@@ -17,6 +17,17 @@ Organizations use Event Hubs to build data pipelines for IoT telemetry, applicat
 | **SLA**                 | [Up to 99.99%](https://azure.microsoft.com/support/legal/sla/event-hubs/)                            |
 
 ---
+## Resilience to availability zone failures
+
+[Availability zones](https://learn.microsoft.com/en-us/azure/reliability/availability-zones-overview) are physically separate groups of datacenters within an Azure region. When one zone fails, services can fail over to one of the remaining zones.
+
+Event Hubs supports zone-redundant deployments in all service tiers. When you create an Event Hubs namespace in a supported region, zone redundancy is automatically enabled at no extra cost. But with the Dedicated tier, availability zones are supported only with a minimum of three CUs. The zone-redundant deployment model applies to all Event Hubs features, including Capture, Schema Registry, and Kafka protocol support.
+
+Event Hubs transparently replicates your configuration, metadata, and event data across three availability zones in the region. Zone redundancy provides automatic failover without any intervention required from you. All Event Hubs components including compute, networking, and storage are replicated across zones. Event Hubs has enough capacity reserves to instantly handle the complete loss of a zone. Even if an entire availability zone becomes unavailable, Event Hubs continues to operate without data loss or interruption to streaming applications.
+
+![Diagram that shows a zone-redundant Event Hubs namespace.](https://learn.microsoft.com/en-us/azure/reliability/media/reliability-event-hubs/availability-zones.svg)
+
+---
 
 ## Pricing
 

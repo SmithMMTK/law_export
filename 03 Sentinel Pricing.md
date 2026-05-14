@@ -48,7 +48,6 @@ let lastDay = datetime(2026-05-01);
 Costs_final_v1_2
 | where BillingPeriodStart between (startDate .. lastDay)
 | where x_SkuMeterCategory == "Sentinel"
-//| where SubAccountName contains "CyberSecurityPCIDSS-az-prd"
 | extend discount_rate = strcat(round(x_TotalDiscountPercent * 100, 0), "%")
 | summarize tolong(sum(BilledCost)) by format_datetime(BillingPeriodStart,"yyyy-MM-dd"), x_SkuMeterCategory , x_CustomerName, SubAccountName, discount_rate,SkuPriceId
 | evaluate pivot(BillingPeriodStart, sum(sum_BilledCost), x_SkuMeterCategory, x_CustomerName, SubAccountName,discount_rate,SkuPriceId)

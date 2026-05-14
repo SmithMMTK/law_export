@@ -26,7 +26,7 @@ Local Storage (JSON/CSV)
 **Best for:** Real-time log transfer, high-volume scenarios, multi-tenant environments
 
 ```
-Azure Resources (AIS Connectors)
+Azure Resources (Connectors)
     ↓
 [Diagnostic Settings]
     ↓

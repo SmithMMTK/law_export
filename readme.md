@@ -2,6 +2,17 @@
 
 This repository provides step-by-step documentation and scripts for exporting logs from Azure Log Analytics Workspace (LAW) to on-premises infrastructure.
 
+- To request best practices for transferring logs from Azure to on‑premises environments.  
+    (When using an Event Hub–based approach, is a Log Analytics Workspace still required?)
+- To validate whether logs from all existing Zava connectors can be directly ingested into Event Hub via Diagnostic Settings.
+- To seek guidance on Event Hub topology design.  
+    In the case of Zava with a multi‑tenant environment, how many Event Hubs are required to transfer logs from multiple tenants to on‑premises infrastructure, and which key factors should be considered?
+- To request details on the Event Hub charging model.  
+    In the context of Zava, how would Event Hub pricing be structured and applied?
+- To reconfirm our understanding of the charging model for Azure Log Analytics Workspace versus Azure Sentinel.  
+    (Azure Sentinel is billed based on the log volume ingested into Log Analytics Workspace, with no additional charges for Sentinel features themselves—please confirm.)
+
+
 Two export methods are covered:
 
 | Method | Use Case | Status |

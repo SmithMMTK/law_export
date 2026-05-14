@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "readme.md",
+                "file": "04 Prepare Azure Resources for exporting to Splunk.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "readme"
+              "title": "04 Prepare Azure Resources for exporting to Splunk"
             }
           }
         ],
@@ -200,17 +200,20 @@
   },
   "active": "d6a59b9f1d8f5a53",
   "lastOpenFiles": [
+    "01 Transferring logs from Azure to on‑premises environments.md",
+    "02 Event Hubs Overview.md",
+    "03 Sentinel Pricing.md",
     "04 Prepare Azure Resources for exporting to Splunk.md",
     "readme.md",
-    "03 Sentinel Pricing.md",
+    "scripts/output/output.csv",
+    "scripts/output/output.json",
+    "scripts/output/transfer.log",
     "scripts/How to run script.md",
     "scripts/output.csv",
     "scripts/output.json",
     "scripts/LAW Export.sh",
     "03 Sentinel Pricing",
-    "02 Event Hubs Overview.md",
     "attachments/Pasted image 20260513140800.png",
-    "attachments",
-    "01 Transferring logs from Azure to on‑premises environments.md"
+    "attachments"
   ]
 }

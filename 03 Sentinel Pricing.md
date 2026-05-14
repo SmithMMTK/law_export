@@ -7,9 +7,10 @@ https://www.microsoft.com/en-us/security/pricing/microsoft-sentinel/
 
 The 50 GB commitment tier is available in public preview, with promotional pricing starting October 1, 2025, until June 30, 2026. Customers who sign up during this period will lock in promotional pricing until March 31, 2027. Promotional price varies by region and is subject to change.[2](https://www.microsoft.com/en-us/security/pricing/microsoft-sentinel/#footnote2)
 
-|SKU|Meter type|Price|
-|---|---|---|
-|50 GB Commitment Tier|Commitment Tier/Day|$161.25 USD|
+| SKU                   | Meter type          | Price       |
+| --------------------- | ------------------- | ----------- |
+| 50 GB Commitment Tier | Commitment Tier/Day | $161.25 USD |
+|                       |                     |             |
 
 ### Sentinel Pricing
 
@@ -43,13 +44,14 @@ https://learn.microsoft.com/en-us/azure/azure-monitor/logs/cost-logs#pricing-mod
 
 ```sql
 let startDate = datetime(2026-01-01);
-let lastDay = datetime(2026-04-01);
+let lastDay = datetime(2026-05-01);
 Costs_final_v1_2
 | where BillingPeriodStart between (startDate .. lastDay)
 | where x_SkuMeterCategory == "Sentinel"
+//| where SubAccountName contains "CyberSecurityPCIDSS-az-prd"
 | extend discount_rate = strcat(round(x_TotalDiscountPercent * 100, 0), "%")
-| summarize tolong(sum(BilledCost)) by format_datetime(BillingPeriodStart,"yyyy-MM-dd"), x_SkuMeterCategory , x_CustomerName, SubAccountName, discount_rate
-| evaluate pivot(BillingPeriodStart, sum(sum_BilledCost), x_SkuMeterCategory, x_CustomerName, SubAccountName,discount_rate)
+| summarize tolong(sum(BilledCost)) by format_datetime(BillingPeriodStart,"yyyy-MM-dd"), x_SkuMeterCategory , x_CustomerName, SubAccountName, discount_rate,SkuPriceId
+| evaluate pivot(BillingPeriodStart, sum(sum_BilledCost), x_SkuMeterCategory, x_CustomerName, SubAccountName,discount_rate,SkuPriceId)
 ```
 
 ### Query Azure Monitor cost from FinOps Ingest 

@@ -15,10 +15,10 @@ This repository provides step-by-step documentation and scripts for exporting lo
 
 Two export methods are covered:
 
-| Method | Use Case | Status |
-|--------|----------|--------|
+| Method                    | Use Case                                                    | Status                             |
+| ------------------------- | ----------------------------------------------------------- | ---------------------------------- |
 | [One-time Bash Export](#) | Periodic backups, compliance reporting, on-demand retrieval | Scripted (`scripts/LAW Export.sh`) |
-| [Event Hub Streaming](#) | Real-time transfer, high-volume, multi-tenant environments | Documented |
+| [Event Hub Streaming](#)  | Real-time transfer, high-volume, multi-tenant environments  | Documented                         |
 
 ---
 
@@ -38,11 +38,15 @@ Includes multi-tenant topology guidance for Zava environments.
 
 Reference for Azure Event Hubs: tiers (Basic / Standard / Premium / Dedicated), throughput units, retention limits, and pricing.
 
+- [ ] High-availability option
+
 ---
 
 ### [03 — Sentinel Pricing](03%20Sentinel%20Pricing.md)
 
 Sentinel commitment tier pricing table and KQL queries for auditing Sentinel and Azure Monitor costs from the FinOps ingestion table.
+
+- [ ] Sentinel cost optimization
 
 ---
 
